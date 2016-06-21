@@ -3,42 +3,84 @@
     <head>
         <title>Jedi Application</title>
         <style>
+            legend {
+                font-size: 0.9em;
+            }
+            div {
+                margin: 0.5em;
+            }
             div label {
                 display: block;
+                font-weight: bold;
+                font-size: 0.9em;
             }
             fieldset {
                 display: inline;
+                vertical-align: top;
+            }
+            .selection {
+                font-weight: normal;
+                display: inline;
+            }
+            .bottom-buttons {
+                background-color: #82a8da;
+                border-color: #a686bf;
+            }
+            .bottom-buttons:hover {
+                background-color: #a686bf;
+            }
+            input:hover {
+                border-color: #a686bf;
+            }
+            textarea:hover {
+                border-color: #a686bf;
+            }
+            input:active {
+                border-color: #a686bf;
+            }
+            textarea {
+                display: block;
+                width: 100%;
+                height: 100px;
+            }
+            footer p {
+                font-size: 0.75em;
             }
         </style>
     </head>
+
     <body>
 
         <h1>Force User Sign Up Form</h1>
 
-        <form>
+        <form action='' method='POST'>
 
             <fieldset>
                 <legend>Basic Info</legend>
                     <div>
                         <label>Full Name</label>
-                        <input >
+                        <input type='text' required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type='email' required>
                     </div>
                     <div>
                         <label>Profile Pic</label>
-                        <button >Choose File</button>
+                        <input type='file' accept='.jpeg,.jpg,.png'>
                     </div>
                     <div>
                         <label>Side:</label>
                             <div>
-                                <input type='radio' name='light' id='side-light'>
-                                <label for='side-light'>Light</label>
-                                <input type='radio' name='dark' id='side-dark'>
-                                <label for='side-dark'>Dark</label>
+                                <input type='radio' name='side' id='side-light'>
+                                <label class='selection' for='side-light'>Light</label>
+                                <input type='radio' name='side' id='side-dark'>
+                                <label class='selection' for='side-dark'>Dark</label>
                             </div>
                     </div>
                     <div>
-                        <label>Origin Story</label>
-                        <textarea ></textarea>
+                        <label for='origin-story'>Origin Story</label>
+                        <textarea id='origin-story' name='origin-story' required></textarea>
                     </div>
             </fieldset>
 
@@ -46,41 +88,60 @@
                 <legend>Abilities</legend>
                     <div>
                         <label>Lightsaber Color</label>
-                        <input >
+                        <select name='Select Color'>
+                            <option value='Select Color' selected>Select Color<option>
+                            <option value='Blue'>Blue</option>
+                            <option value='Red'>Red</option>
+                            <option value='Green'>Green</option>
+                            <option value='Purple'>Purple</option>
+                        </select>
                     </div>
                     <div>
                         <label>How many objects can you levitate at once?</label>
-                        <input >
+                        <input type='number' min='1'>
                     </div>
                     <div>
                         <label>Favorite Ability</label>
-                        <input >
+                        <input type='text'>
                     </div>
                     <div>
                         <label>Pilot Experience</label>
-                        <input >
+                        <div>
+                            <input type='checkbox'>
+                            <label class='selection'>Speeder</label>
+                            <input type='checkbox'>
+                            <label class='selection'>Transport</label>
+                            <input type='checkbox'>
+                            <label class='selection'>X-wing</label>
+                            <input type='checkbox'>
+                            <label class='selection'>TIE Fighter</label>
+                            <input type='checkbox'>
+                            <label class='selection'>Starship</label>
+                            <input type='checkbox'>
+                            <label class='selection'>Bantha</label>
+                        </div>
                     </div>
             </fieldset>
             <fieldset>
                 <legend>Application Info</legend>
                     <div>
                         <label>Desired Mentor</label>
-                        <input >
+                        <input type='text'>
                     </div>
                     <div>
                         <label>Application Date</label>
-                        <input >
+                        <input type='date' required>
                     </div>
                     <div>
                         <label>Application Password</label>
-                        <input >
+                        <input type='password' required>
                     </div>
                     <div>
-                        <label>How do you get to the dark side?</label>
-                        <textarea ></textarea>
+                        <label for='weakness'>How do you get to the dark side?</label>
+                        <textarea id='weakness' name='weakness'></textarea>
                     </div>
-                    <button>Start Over</button>
-                    <button>Apply</button>
+                    <button type='reset' class='bottom-buttons'>Start Over</button>
+                    <button type='submit' class='bottom-buttons'>Apply</button>
             </fieldset>
 
         </form>
