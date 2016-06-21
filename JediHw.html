@@ -2,9 +2,92 @@
 <html>
     <head>
         <title>Jedi Application</title>
-        <style></style>
+        <style>
+            div label {
+                display: block;
+            }
+            fieldset {
+                display: inline;
+            }
+        </style>
     </head>
     <body>
+
+        <h1>Force User Sign Up Form</h1>
+
+        <form>
+
+            <fieldset>
+                <legend>Basic Info</legend>
+                    <div>
+                        <label>Full Name</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>Profile Pic</label>
+                        <button >Choose File</button>
+                    </div>
+                    <div>
+                        <label>Side:</label>
+                            <div>
+                                <input type='radio' name='light' id='side-light'>
+                                <label for='side-light'>Light</label>
+                                <input type='radio' name='dark' id='side-dark'>
+                                <label for='side-dark'>Dark</label>
+                            </div>
+                    </div>
+                    <div>
+                        <label>Origin Story</label>
+                        <textarea ></textarea>
+                    </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Abilities</legend>
+                    <div>
+                        <label>Lightsaber Color</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>How many objects can you levitate at once?</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>Favorite Ability</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>Pilot Experience</label>
+                        <input >
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Application Info</legend>
+                    <div>
+                        <label>Desired Mentor</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>Application Date</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>Application Password</label>
+                        <input >
+                    </div>
+                    <div>
+                        <label>How do you get to the dark side?</label>
+                        <textarea ></textarea>
+                    </div>
+                    <button>Start Over</button>
+                    <button>Apply</button>
+            </fieldset>
+
+        </form>
+
+        <footer>
+            <p>&copy; 2016 The Republic</p>
+        </footer>
 
     </body>
 </html>
