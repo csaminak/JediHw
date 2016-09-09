@@ -74,28 +74,28 @@
 
         <h1>Force User Sign Up Form</h1>
 
-        <form action='http://requestb.in/1m004gd1' method='POST'>
+        <form action='http://requestb.in/1n5qq8p1' method='POST'>
 
             <fieldset>
                 <legend>Basic Info</legend>
                     <div>
                         <label>Full Name</label>
-                        <input type='text' required id='AppName'>
+                        <input type='text' id='AppName' name='AppName' required>
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type='email' required id='email'>
+                        <input type='email' id='email' name='email' required>
                     </div>
                     <div>
-                        <label>Profile Pic</label>
-                        <input type='file' accept='.jpeg,.jpg,.png'>
+                        <label for='ProfilePic'>Profile Pic</label>
+                        <input name='ProfilePic' id='ProfilePic' type='file' accept='.jpeg,.jpg,.png,.gif'>
                     </div>
                     <div>
                         <label>Side:</label>
                             <div>
-                                <input type='radio' name='side' id='side-light'>
+                                <input type='radio' name='side' id='side-light' value='light-side'>
                                 <label class='selection' for='side-light'>Light</label>
-                                <input type='radio' name='side' id='side-dark'>
+                                <input type='radio' name='side' id='side-dark' value='dark-side'>
                                 <label class='selection' for='side-dark'>Dark</label>
                             </div>
                     </div>
@@ -108,9 +108,9 @@
             <fieldset>
                 <legend>Abilities</legend>
                     <div>
-                        <label>Lightsaber Color</label>
-                        <select name='Select Color'>
-                            <option value='Select Color' selected>Select Color<option>
+                        <label for='LightSaberColor'>Lightsaber Color</label>
+                        <select id='LightSaberColor' name='SelectColor'>
+                            <option value='' selected>Select Color<option>
                             <option value='Blue'>Blue</option>
                             <option value='Red'>Red</option>
                             <option value='Green'>Green</option>
@@ -118,48 +118,48 @@
                         </select>
                     </div>
                     <div>
-                        <label>How many objects can you levitate at once?</label>
-                        <input type='number' min='1' id='LevNum'>
+                        <label for='LevNum'>How many objects can you levitate at once?</label>
+                        <input name='LevNum' type='number' min='1' id='LevNum'>
                     </div>
                     <div>
                         <label>Favorite Ability</label>
-                        <input type='text' id='FavAbility'>
+                        <input name='FavAbility' type='text' id='FavAbility'>
                     </div>
                     <div>
                         <label>Pilot Experience</label>
                         <div>
-                            <input type='checkbox'>
-                            <label class='selection'>Speeder</label>
-                            <input type='checkbox'>
-                            <label class='selection'>Transport</label>
-                            <input type='checkbox'>
-                            <label class='selection'>X-wing</label>
-                            <input type='checkbox'>
-                            <label class='selection'>TIE Fighter</label>
-                            <input type='checkbox'>
-                            <label class='selection'>Starship</label>
-                            <input type='checkbox'>
-                            <label class='selection'>Bantha</label>
+                            <input id='Pilot-Experience-Speeder' name='Pilot-Experience' value='Speeder' type='checkbox'>
+                            <label for='Pilot-Experience-Speeder' class='selection'>Speeder</label>
+                            <input id='Pilot-Experience-Transport' name='Pilot-Experience' value='Transport' type='checkbox'>
+                            <label for='Pilot-Experience-Transport' class='selection'>Transport</label>
+                            <input id='Pilot-Experience-Xwing' name='Pilot-Experience' value='X-wing' type='checkbox'>
+                            <label for='Pilot-Experience-Xwing' class='selection'>X-wing</label>
+                            <input id='Pilot-Experience-TIEFighter' name='Pilot-Experience' value='TIE Fighter' type='checkbox'>
+                            <label for='Pilot-Experience-TIEFighter' class='selection'>TIE Fighter</label>
+                            <input id='Pilot-Experience-Starship' name='Pilot-Experience' value='Starship' type='checkbox'>
+                            <label for='Pilot-Experience-Starship' class='selection'>Starship</label>
+                            <input id='Pilot-Experience-Bantha' name='Pilot-Experience' value='Bantha' type='checkbox'>
+                            <label for='Pilot-Experience-Bantha' class='selection'>Bantha</label>
                         </div>
                     </div>
             </fieldset>
             <fieldset>
                 <legend>Application Info</legend>
                     <div>
-                        <label>Desired Mentor</label>
-                        <input type='text' id='mentor'>
+                        <label for='mentor'>Desired Mentor</label>
+                        <input name='mentor' type='text' id='mentor'>
                     </div>
                     <div>
-                        <label>Application Date</label>
-                        <input type='date' required>
+                        <label for='AppDate'>Application Date</label>
+                        <input id='AppDate' name='AppDate' type='date' min='2016-07-04' required>
                     </div>
                     <div>
-                        <label>Application Password</label>
-                        <input type='password' required>
+                        <label for='AppPass'>Application Password</label>
+                        <input id='AppPass' type='password' required>
                     </div>
                     <div>
                         <label for='weakness'>How do you get to the dark side?</label>
-                        <textarea id='weakness' name='weakness'></textarea>
+                        <textarea id='weakness' name='weakness' type='text'></textarea>
                     </div>
                     <button type='reset' class='bottom-buttons'>Start Over</button>
                     <button type='submit' class='bottom-buttons'>Apply</button>
